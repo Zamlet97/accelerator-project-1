@@ -1,0 +1,144 @@
+.form {
+  padding-top: 70px;
+  background-color: $primary-color;
+  color: $white-color;
+
+  @media (min-width: $tablet-min-width) {
+    padding-top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    padding-top: 0;
+    padding-left: 103px;
+    position: relative;
+    margin: 0;
+    z-index: 2;
+  }
+}
+
+.form__title {
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet-min-width) {
+    text-align: center;
+    line-height: 54px;
+    font-size: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
+    text-align: start;
+  }
+}
+
+.form__wrapper {
+  @media (min-width: $desktop-width) {
+    padding-right: 103px;
+  }
+}
+
+.form__entry {
+  @media (min-width: $tablet-min-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 30px;
+  }
+}
+
+.form__input {
+  background-color: transparent;
+  border-style: none;
+  border-bottom: 1px solid #74819c;
+  width: 100%;
+  line-height: 22px;
+  font-size: 14px;
+  padding: 5px;
+  color: $white-color;
+  margin-bottom: 30px;
+  font-family: $secondary-fonts;
+  padding-left: 0;
+
+  @media (min-width: $tablet-min-width) {
+    width: 205px;
+    margin-bottom: 32px;
+    padding: 7px 0 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 223px;
+  }
+
+  &:hover {
+    border-color: $white-color;
+  }
+
+  &:focus {
+    border-bottom: 1px solid transparent;
+    outline: 1px solid $white-color;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+  }
+
+  &:user-invalid {
+    border-color: $error-color;
+  }
+
+  &::placeholder {
+    opacity: 0.7;
+  }
+}
+
+.form__button {
+  width: 100%;
+  display: block;
+  padding: 22px 10px;
+  background-color: transparent;
+  text-align: center;
+  border: 2px solid $white-color;
+  color: $white-color;
+  line-height: 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 6px;
+  margin-bottom: 70px;
+
+  @media (min-width: $tablet-min-width) {
+    width: 440px;
+    padding: 26px 10px 24px;
+    margin-top: 4px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 477px;
+  }
+
+  &:hover {
+    background-color: $white-color;
+    color: #103aae;
+    transition: 0.6s;
+  }
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #103aae;
+    border: 2px solid transparent;
+    outline: 2px solid #000000;
+    transition: 0.6s;
+  }
+
+  &:active {
+    background-color: $white-color;
+    color: $primary-color;
+    transition: 0.6s;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,358 @@
+.faq {
+  background-color: $white-other-color;
+}
+
+.faq__wrapper {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  @media (min-width: $tablet-min-width) {
+    padding-top: 0;
+    padding-bottom: 81px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 101px;
+  }
+}
+
+.faq__title {
+  text-align: center;
+  padding-bottom: 35px;
+
+  @media (min-width: $tablet-min-width) {
+    padding-top: 61px;
+    padding-bottom: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1160px;
+    padding-top: 101px;
+    padding-bottom: 49px;
+    text-align: start;
+  }
+}
+
+.faq__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-left: 0;
+  padding-bottom: 35px;
+  margin: 0;
+  align-items: center;
+  list-style: none;
+
+  @media (min-width: $tablet-min-width) {
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    margin-right: 40px;
+  }
+}
+
+.faq__item {
+  width: 140px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  padding: 15px 23px 13px;
+  border: 1px solid rgba(16, 38, 84, 0.2);
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: $tablet-min-width) {
+    width: 162px;
+    padding: 18px 23px 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 260px;
+    padding: 19px 23px 15px;
+  }
+}
+
+
+.faq__item--current {
+  background: linear-gradient(127.3deg, #ed0233 20%, #003eb7);
+  color: $white-color;
+  border: 1px solid rgba(16, 38, 84, 0.2);
+}
+
+.faq__answers-list {
+  padding-left: 0;
+  margin: 0;
+}
+
+.faq__answers-title {
+  grid-area: title;
+  text-align: start;
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  max-width: 238px;
+  position: relative;
+  padding-top: 20px;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 22px;
+    line-height: 22px;
+    max-width: 500px;
+    padding-top: 33px;
+    padding-bottom: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 24px;
+    max-width: 660px;
+    padding-top: 30px;
+  }
+}
+
+.faq__answers-transform {
+  @media (width >= 320px) and (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+.faq__answers-text {
+  grid-area: text;
+  margin: 0;
+  max-width: 238px;
+  font-size: 16px;
+  line-height: 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 560px;
+    padding-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 660px;
+  }
+}
+
+.faq__transfer {
+  @media (min-width: $tablet-min-width) {
+    display: none;
+  }
+}
+
+.faq__button {
+  background-color: transparent;
+  border-style: none;
+  padding: 0;
+  color: inherit;
+  line-height: 16px;
+  font-size: 16px;
+  z-index: 2;
+  cursor: pointer;
+
+  @media (min-width: $tablet-min-width) {
+    line-height: 18px;
+    font-size: 18px;
+  }
+
+  &:focus {
+    outline: none;
+    color: $primary-color;
+  }
+
+  &:active {
+    color: $white-color;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+  }
+}
+
+.faq__button:hover::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border: 1px solid $primary-color;
+  left: 0;
+  top: 0;
+}
+
+.faq__button:focus::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: $white-color;
+  position: absolute;
+  border: 1px solid $primary-color;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.faq__button:active::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(127.3deg, #ed0233 20%, #003eb7);
+  color: $white-color;
+  position: absolute;
+  border: 1px solid rgba(16, 38, 84, 0.2);
+}
+
+.faq__answers-title::after {
+  content: "+";
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid $secondary-button-color;
+  display: block;
+  font-size: 29px;
+  font-weight: 100;
+  color: $secondary-button-color;
+  padding: 3px 7px;
+  margin-left: auto;
+  position: absolute;
+  right: -52px;
+  top: 26px;
+
+  @media (min-width: $tablet-min-width) {
+    width: 40px;
+    height: 40px;
+    right: -179px;
+    padding: 8px 9px;
+    font-size: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: -200px;
+  }
+}
+
+.faq__answers-open:nth-child(4) .faq__answers-title {
+  @media (min-width: $tablet-min-width) {
+    padding-top: 25px;
+    padding-bottom: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.faq__answers-open:nth-child(3) .faq__answers-title::after,
+.faq__answers-open:nth-child(4) .faq__answers-title::after {
+  content: "+";
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid $secondary-button-color;
+  display: block;
+  font-size: 28px;
+  font-weight: 100;
+  color: $secondary-button-color;
+  padding: 3px 7px;
+  margin-left: auto;
+  position: absolute;
+  right: -52px;
+  top: 36px;
+
+  @media (min-width: $tablet-min-width) {
+    width: 40px;
+    height: 40px;
+    right: -179px;
+    top: 24px;
+    padding: 8px 9px;
+    font-size: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: -200px;
+    top: 20px;
+  }
+}
+
+.faq__answers-title:hover::after,
+.faq__answers-open:nth-child(3) .faq__answers-title:hover::after,
+.faq__answers-open:nth-child(4) .faq__answers-title:hover::after {
+  color: $white-color;
+  background-color: $primary-color;
+}
+
+.faq__answers-title:focus::after,
+.faq__answers-open:nth-child(3) .faq__answers-title:focus::after,
+.faq__answers-open:nth-child(4) .faq__answers-title:focus::after {
+  color: $white-color;
+  background-color: #74819c;
+}
+
+.faq__answers-title:disabled::after,
+.faq__answers-open:nth-child(3) .faq__answers-title:disabled::after,
+.faq__answers-open:nth-child(4) .faq__answers-title:disabled::after {
+  opacity: 0.3;
+}
+
+.faq__answers-open {
+  border-bottom: 1px solid #74819c;
+  cursor: pointer;
+
+  &:first-child {
+    border-top: 1px solid #74819c;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 860px;
+  }
+}
+
+.faq__answers-open[open] > .faq__answers-text {
+  @media (min-width: $tablet-min-width) {
+    padding-top: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 31px;
+  }
+}
+
+.faq__answers-open[open] > .faq__answers-title {
+  @media (min-width: $tablet-min-width) {
+    padding-bottom: 0;
+  }
+}
+
+.faq__answers-open[open] > .faq__answers-title::after {
+  content: " \2212";
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $secondary-button-color;
+  display: block;
+  font-size: 32px;
+  font-weight: 100;
+  padding: 5px 6px;
+  position: absolute;
+  color: $white-color;
+
+  @media (min-width: $tablet-min-width) {
+    width: 40px;
+    height: 40px;
+    font-size: 56px;
+    top: 24px;
+    padding: 9px 4px;
+  }
+}

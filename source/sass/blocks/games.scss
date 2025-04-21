@@ -1,0 +1,234 @@
+.games {
+  background-color: $white-color;
+}
+
+.games__wrapper {
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet-min-width) {
+    display: flex;
+    padding-top: 58px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 99px;
+    padding-bottom: 100px;
+  }
+}
+
+.games__wrapping {
+  background-color: $banner-color;
+  color: $white-color;
+  padding-bottom: 24px;
+
+  @media (min-width: $tablet-min-width) {
+    width: 300px;
+    padding: 2px 0 0;
+    margin-bottom: 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 500px;
+    padding: 60px 80px 98px;
+  }
+}
+
+.games__image {
+  @media (min-width: $tablet-min-width) {
+    padding-top: 2px;
+  }
+}
+
+.games__promo-wrapper {
+  padding: 40px 40px 16px;
+  display: flex;
+  gap: 37px;
+
+  @media (min-width: $tablet-min-width) {
+    gap: 0;
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 28px;
+  }
+}
+
+.games__promo {
+  font-weight: 400;
+  font-family: $primary-fonts;
+  font-size: 48px;
+  line-height: 54px;
+  width: 150px;
+
+  @media (min-width: $tablet-min-width) {
+    width: 121px;
+    font-weight: 600;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 82px;
+    line-height: 96px;
+  }
+}
+
+.games__text {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 40px;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+  }
+}
+
+.games__link {
+  text-transform: uppercase;
+  color: $white-color;
+  border: $border-primary;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+  font-family: inherit;
+  width: 210px;
+  display: block;
+  text-align: center;
+  padding: 22px 10px;
+  margin: 16px 40px;
+
+  @media (min-width: $tablet-min-width) {
+    width: 220px;
+    margin: 10px 40px;
+    padding: 25px 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 340px;
+    margin: 32px 0 0;
+  }
+
+  &:hover {
+    background-color: $white-color;
+    color: #103aae;
+    transition: 0.6s;
+  }
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #103aae;
+    border: 2px solid transparent;
+    outline: 2px solid #000000;
+    transition: 0.6s;
+  }
+
+  &:active {
+    background-color: $white-color;
+    color: $primary-color;
+    transition: 0.6s;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.games__date-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  @media (min-width: $tablet-min-width) {
+    width: 100px;
+    gap: 9px;
+    margin-right: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: auto;
+    margin-right: -5px;
+    gap: 22px;
+    padding-right: 5px;
+  }
+}
+
+.games__date {
+  display: flex;
+  flex-direction: column;
+}
+
+.games__date-item {
+  border-bottom: 1px solid $white-color;
+  font-size: 16px;
+  line-height: 20px;
+  padding-bottom: 2px;
+
+  @media (min-width: $tablet-min-width) {
+    line-height: 24px;
+    font-size: 18px;
+    padding-bottom: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 5px;
+    margin-top: -1px;
+  }
+}
+
+.games__time {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  line-height: 12px;
+  font-size: 12px;
+  gap: 4px;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    max-width: 37px;
+    padding-top: 2.5px;
+    letter-spacing: 0.4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 3.5px;
+  }
+}
+
+.games__date-number {
+  line-height: 24px;
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 2px;
+
+  @media (min-width: $tablet-min-width) {
+    padding-top: 2px;
+
+    &:nth-child(1) {
+      margin-top: -3px;
+      margin-right: 1px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 5px;
+
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
